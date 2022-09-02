@@ -17,4 +17,7 @@ private suspend fun doWorld() = coroutineScope {
 
 //launch is a coroutine builder. It launches a new coroutine concurrently, work independently
 //delay is suspending function does not block the underlying thread but allows other coroutines to run and use the underlying thread
-//runblocking is also a coroutine builder that bridges the non-coroutine to coroutine.
+//runblocking, coroutineScope are also a coroutine builder
+//blocking = no coroutine can execute on this thread until the blocking call is finished
+//suspending = other coroutines can execute on the thread
+
